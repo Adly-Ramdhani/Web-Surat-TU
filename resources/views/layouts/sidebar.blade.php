@@ -1,7 +1,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
         <br>
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <!-- Sidebar - Brand -->b
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('dashboard') }}">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <br>
                 </div>
@@ -36,7 +36,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="{{ route('users.staff.home') }}">Data Staf</a>
-                        <a class="collapse-item" href="{{ route('users.guru.home') }}">Data Guru</a>
+                        {{-- <a class="collapse-item" href="{{ route('users.guru.home') }}">Data Guru</a> --}}
                     </div>
                 </div>
             </li>

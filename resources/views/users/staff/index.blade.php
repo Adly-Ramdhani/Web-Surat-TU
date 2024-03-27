@@ -1,6 +1,8 @@
 @extends('layouts.index')
 
 @section('content')
+
+
 <br>
 <a href="{{ route('users.staff.create') }}"><button type="submit" class="btn btn-primary" style="float:right; margin-bottom:2rem;">Tambah Pengguna</button></a>
 <table class="table table-striped table-bordered table-hover">

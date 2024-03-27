@@ -23,7 +23,7 @@
           <td>{{ $item['name_type'] }}</td>
           <td>{{ \App\Models\Letter::countUsageByType($item->id) }}</td>
           <td class="d-flex justify-content-center">
-            {{-- <a href="{{ route('klasifikasi.lihat', ['id' => $item['id']]) }}" class="btn btn-primary me-3">Lihat</a> --}}
+            <a href="{{ route('klasifikasi.lihat', ['id' => $item['id']]) }}" class="btn me-3">Lihat</a>
             <a href="{{ route('klasifikasi.edit', ['id' => $item['id']]) }}" class="btn btn-primary me-3">Edit</a>
             <form action="{{ route('klasifikasi.delete', $item['id']) }}" method="POST">
               @csrf

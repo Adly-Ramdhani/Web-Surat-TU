@@ -161,7 +161,7 @@ class UserController extends Controller
             'name' => $validatedData['name'],
             'email' => $validatedData['email'],
             'role' => 'guru',
-            'password' => bcrypt('defaultpassword'),
+            'password' => ('defaultpassword'),
         ]);
 
         return redirect()->route('users.guru.home')->with('success', 'Berhasil menambahkan Users!');

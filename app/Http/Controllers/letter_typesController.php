@@ -98,6 +98,22 @@ class letter_typesController extends Controller
   }
 
 
+ public function lihat($id)
+    {
+        try {
+            // Fetch the LetterType instance with the given $id
+            $letterType = Letter_type::findOrFail($id);
+            $letters = $letterType->letters()->get();
+    
+            // Pass the retrieved data to the view
+            return view('klasifikasi.lihat', compact('letterType', 'letters'));
+        } catch (ModelNotFoundException $exception) {
+            // Handle the case where the letter type is not found
+            return response()->json(['error' => 'Letter type not found'], 404);
+        }
+    }
+
+
 
 public function exportExcel() 
     {

@@ -11,8 +11,14 @@ class Letter_type extends Model
 
     use HasFactory;
 
+    public function letters()
+    {
+        return $this->hasMany(Letter::class);
+    }
+
     public function letter()
     {
+        
         return $this->belongsTo(Letter::class);
     }
 }
